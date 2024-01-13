@@ -1,11 +1,7 @@
-//import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
 
-// include your styles into the webpack bundle
 import "../styles/index.css";
-
-//import your own components
 import Home from "./component/home.jsx";
 
 let counter = 0
@@ -19,7 +15,13 @@ setInterval(() => {
     let six = Math.floor((counter / 100000) % 10)
     counter++
     ReactDOM.render
-    ReactDOM.render(<Home one={one} two={two} three={three} four={four} five={five} six={six}/>, document.querySelector("#app"));
+    ReactDOM.render(<Home one={one} 
+        two={two} 
+        three={three} 
+        four={four} 
+        five={five} 
+        six={six}/>, 
+        document.querySelector("#app"));
 }, 1000)
 
 //render your react application
